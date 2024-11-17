@@ -1,0 +1,16 @@
+<div>
+    @for (game of games; track $index) {
+    <app-nav-bar-item [game]="game" (likeEvent)="onLike('yes')" />
+    }
+</div>
+<div>
+    <button (click)="addGame()">Add game</button>
+</div>
+<hr>
+<div>
+    @for (post of posts; track $index) {
+        @if (post.id <= 20) {
+        <div>{{post.id}}</div>
+        }
+    }
+</div>
